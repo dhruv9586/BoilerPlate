@@ -1,5 +1,5 @@
 {
-  "name": "mern-server",
+  "name": "Nodejs BoilerPlate",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,7 @@
     "start": "nodemon --exec babel-node index.js ",
     "postinstall": "npm run build"
   },
-  "author": "amazingandyyy",
-  "license": "MIT",
+  "author": "Dhruv Kohsiyar",
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.15.2",
