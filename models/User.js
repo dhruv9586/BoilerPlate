@@ -33,17 +33,11 @@ let schema = new mongoose.Schema({
 
 schema.pre('save', function (next) {
     const password = this.password
-    if (!password) {
-        next()
-    }
-    try {
+    if (this.isModified('password')) {
         const salt = bcrypt.genSaltSync();
         this.password = bcrypt.hashSync(password, salt)
-        next()
     }
-    catch (error) {
-        return next(error)
-    }
+    next()
 })
 
 schema.methods.toJSON = function () {
